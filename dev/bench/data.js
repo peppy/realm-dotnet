@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1610809613839,
+  "lastUpdate": 1618012164860,
   "repoUrl": "https://github.com/realm/realm-dotnet",
   "entries": {
     "Benchmark": [
@@ -3600,6 +3600,198 @@ window.BENCHMARK_DATA = {
             "value": 3764163.324652778,
             "unit": "ns",
             "range": "± 122308.32349216475"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "andrea.catalini89@gmail.com",
+            "name": "Andrea Catalini",
+            "username": "LaPeste"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "b42cebc8e907d684da1efc9765e84a0ebe2ee2a9",
+          "message": "Build wrappers on Github Actions (#2267)\n\n* First action attempt\r\n\r\n* Wrong path to action\r\n\r\n* Renamed action\r\n\r\n* Sadly the action is brought back to do 1 thing only\r\n\r\n* Some mispelling\r\n\r\n* Created JS action to build wrapper\r\n\r\n* Renamed folder in main.yml\r\n\r\n* Reshuffled things\r\n\r\n* Hopefully nodejs 14 and not 12\r\n\r\n* Few fixes\r\n\r\n* Removed nodejs 14 stuff\r\n\r\n* All compacted into index.js\r\n\r\n* First iteration of build_wrappers action\r\n\r\n* Added some info text\r\n\r\n* Forgot to update action path\r\n\r\n* Moved from core.debug to core.info\r\n\r\n* Updated string to use template literals\r\n\r\n* Correct error to return success\r\n\r\n* Forgot to build\r\n\r\n* I like it more with the dash\r\n\r\n* Forgot to build again\r\n\r\n* Fixed some checks on string content\r\n\r\n* Build forgotten\r\n\r\n* Live output for built cmd + removed exit code when error\r\n\r\n* Reverted to cp.exec\r\n\r\n* Better output folding\r\n\r\n* Check for error at caching\r\n\r\n* Some fixes + lots of prints\r\n\r\n* Changed from exec to spawn\r\n\r\n* Try to fix spawn and env var\r\n\r\n* Small improvements\r\n\r\n* Async method should now be fixed\r\n\r\n* Final test to check correctness\r\n\r\n* Small code style changes\r\n\r\n* First attempt at making caching and building general\r\n\r\n* Forgotten meta build action\r\n\r\n* Fixed some mispelling in commands in main\r\n\r\n* Refactored lots of stuff\r\n\r\n* Json in 1 line in main.yml workflow\r\n\r\n* Added test framework, added tests for input parsing, split utils in multiple files\r\n\r\n* Added a TODO and better logging in spawned child\r\n\r\n* Removed hash options, it doesn't seem necessary\r\n\r\n* Unit test added for all common functionalities\r\n\r\n* Extracted main functionalities from action\r\n\r\n* Updated action.yml name and description\r\n\r\n* Folder rename\r\n\r\n* Small cleanup main.yml\r\n\r\n* Extrapolated core code in it's own folder\r\n\r\n* Forgotten to change path to action in workflow\r\n\r\n* Fix path for action\r\n\r\n* This time path to action should be fixed\r\n\r\n* Minor fixes\r\n\r\n* Temporary test with external repo for core code\r\n\r\n* Just a test with types in lib\r\n\r\n* Small error correction\r\n\r\n* Test with checkout action\r\n\r\n* Attempt moving checkout js in same dist of build_executor\r\n\r\n* Test with double checkout\r\n\r\n* Postponment of checkout action inclued\r\n\r\n* Fixed some wrong build command\r\n\r\n* Added package folder (lib) and changed input parsing for paths\r\n\r\n* Updated path to packages in main\r\n\r\n* Added optional hash prefix\r\n\r\n* HashKey used as index by the cache function is now returned as output\r\n\r\n* Cmds in input aren't anymore a json array of json objects\r\n\r\n* Reshaped tasks.json, added scripts in package.json and updated structure in packages\r\n\r\n* Eslinter and prettifier setup and run\r\n\r\n* Removed result struct and reintroduced exceptions\r\n\r\n* As far as I can go with the linter\r\n\r\n* Made utils internal, linted and prettified action\r\n\r\n* Final adjustments for PR review\r\n\r\n* Added one more test to check prefix on hash\r\n\r\n* Fixed wrongly passed hash prefix\r\n\r\n* Returned wrong value from main\r\n\r\n* Some rephrasing\r\n\r\n* Improved comments\r\n\r\n* Added settings for debugging source code and tests\r\n\r\n* Reshaped hashing function to better account json structure + improved test speed on hashing test\r\n\r\n* Rephrased a log\r\n\r\n* Final minor corrections before PR review\r\n\r\n* Forgotten to build and lint/prettify\r\n\r\n* Better fail message\r\n\r\n* Improved input_parsing and expanded tests\r\n\r\n* More unit testing, more safety checks and few other minor changes\r\n\r\n* Fixes for the GA package (#2306)\r\n\r\n* Add typescript to dependencies\r\n* Add some basic eslint rules (will extend later)\r\n* Add typings to package.json\r\n* Add __tests__ to tsc includes\r\n* Disable the unused var warnings for tests\r\n\r\n* Indent code with 4 spaces (#2307)\r\n\r\n* Indent code with 4 spaces\r\n\r\n* Increase print-width\r\n\r\n* Simplified according to PR review\r\n\r\n* Fixed input in action\r\n\r\n* Compacted code in only 1 file\r\n\r\n* Added options to debug typescript files directly\r\n\r\n* Forgot to remove a comment\r\n\r\n* Migrate GA to a pure workflow (#2322)\r\n\r\n* wip\r\n\r\n* Supply input and output paths to the action\r\n\r\n* Add ncc\r\n\r\n* Fix the action metadata\r\n\r\n* Tweak the build wrappers command\r\n\r\n* Try to simplify configuration passing to bash builds\r\n\r\n* Bump down ubuntu version for android\r\n\r\n* Try and use ytt for templates\r\n\r\n* Remove the `null` from PR\r\n\r\n* Try #3\r\n\r\n* Try #4\r\n\r\n* Try 5\r\n\r\n* Try 6\r\n\r\n* Try to use pure workflow\r\n\r\n* Remove extra brace\r\n\r\n* Yet another brace\r\n\r\n* cacheKey -> key\r\n\r\n* Add the cache condition to any intermediate steps\r\n\r\n* Revert files that are unrelated to the workflow change\r\n\r\n* More tweaks to the template\r\n\r\n* Test building iOS wrappers\r\n\r\n* Try to build iOS #2\r\n\r\n* Bring back the cmake configuration check in ios and android build scripts\r\n\r\n* Try building linux on bare metal\r\n\r\n* Use correct ubuntu image\r\n\r\n* Try to add Android\r\n\r\n* Put matrix under strategy\r\n\r\n* Setup NDK env variables\r\n\r\n* Add $\r\n\r\n* Don't download the ndk\r\n\r\n* Added windows to templates\r\n\r\n* Try to cache vcpkg\r\n\r\n* Trigger uncached build\r\n\r\n* Trigger another uncached build\r\n\r\n* Another build\r\n\r\n* Another uncached run\r\n\r\n* Revert dummy changes\r\n\r\n* Added UWP to template\r\n\r\n* Fixed small detail\r\n\r\n* Added saving output\r\n\r\n* Always output cacheKey from building wrappers\r\n\r\n* Removed TODO comment\r\n\r\n* Ac/retrieve multiple caches ga (#2325)\r\n\r\n* Added fetching multiple bins\r\n\r\n* Store binaries as artifacts\r\n\r\n* Store binaries as artifacts - 2\r\n\r\n* Store binaries as artifacts - 3\r\n\r\n* Store binaries as artifacts - 4\r\n\r\n* Store binaries as artifacts - 5\r\n\r\n* PR ready for review\r\n\r\nCo-authored-by: Andrea Catalini <andrea.catalini89@gmail.com>\r\n\r\n* Remove the typescript action (#2326)\r\n\r\n* remove some leftovers\r\n\r\n* Remove process.sh\r\n\r\nCo-authored-by: Nikola Irinchev <irinchev@me.com>",
+          "timestamp": "2021-04-10T01:10:21+02:00",
+          "tree_id": "b07a3e071baf82ed0356d448d97533863a9286d9",
+          "url": "https://github.com/realm/realm-dotnet/commit/b42cebc8e907d684da1efc9765e84a0ebe2ee2a9"
+        },
+        "date": 1618012138822,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 10)",
+            "value": 273363.2828776042,
+            "unit": "ns",
+            "range": "± 8014.434279402632"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 100)",
+            "value": 270600.859375,
+            "unit": "ns",
+            "range": "± 5884.19590664545"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 1000)",
+            "value": 285740.9895833333,
+            "unit": "ns",
+            "range": "± 4353.0012227516845"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 10)",
+            "value": 47698.34774241728,
+            "unit": "ns",
+            "range": "± 977.5302454214591"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 100)",
+            "value": 119618.09905296148,
+            "unit": "ns",
+            "range": "± 6477.938704269655"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 1000)",
+            "value": 867799.5582217262,
+            "unit": "ns",
+            "range": "± 16499.305626465863"
+          },
+          {
+            "name": "PerformanceTests.ObjectTests.GetPropertyValue",
+            "value": 1526.5103612627302,
+            "unit": "ns",
+            "range": "± 60.09410429719648"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 20)",
+            "value": 509.7371076282702,
+            "unit": "ns",
+            "range": "± 10.63607287849069"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 100)",
+            "value": 1275.7935390915982,
+            "unit": "ns",
+            "range": "± 69.08629345028953"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 1000)",
+            "value": 12909.5139503479,
+            "unit": "ns",
+            "range": "± 248.55266863865478"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 20)",
+            "value": 5196.715316772461,
+            "unit": "ns",
+            "range": "± 287.0722005151049"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 100)",
+            "value": 5859.5226005271625,
+            "unit": "ns",
+            "range": "± 307.3312066419617"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 1000)",
+            "value": 15059.642757068981,
+            "unit": "ns",
+            "range": "± 828.4551295197331"
+          },
+          {
+            "name": "PerformanceTests.ObjectTests.SetPropertyValue",
+            "value": 388.168112162886,
+            "unit": "ns",
+            "range": "± 21.04529737792608"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 20)",
+            "value": 801.2606000900269,
+            "unit": "ns",
+            "range": "± 28.45484803702037"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 100)",
+            "value": 958.6178779602051,
+            "unit": "ns",
+            "range": "± 58.40194321551018"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 1000)",
+            "value": 5738.561973571777,
+            "unit": "ns",
+            "range": "± 342.99936545194487"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 128, ObjectCount: 10)",
+            "value": 5184569.73805147,
+            "unit": "ns",
+            "range": "± 166120.1718719643"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 128, ObjectCount: 100)",
+            "value": 5315865.22752193,
+            "unit": "ns",
+            "range": "± 215534.41354194598"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1024, ObjectCount: 10)",
+            "value": 5245077.629573171,
+            "unit": "ns",
+            "range": "± 185517.55335281033"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1024, ObjectCount: 100)",
+            "value": 5251751.226380814,
+            "unit": "ns",
+            "range": "± 192532.2687285463"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1048576, ObjectCount: 10)",
+            "value": 5477946.645220588,
+            "unit": "ns",
+            "range": "± 172359.97197742047"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1048576, ObjectCount: 100)",
+            "value": 8169170.52631579,
+            "unit": "ns",
+            "range": "± 734227.5599297254"
+          },
+          {
+            "name": "PerformanceTests.EmptyWriteTests.Write",
+            "value": 5128296.490778688,
+            "unit": "ns",
+            "range": "± 229506.5205894487"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 20, ObjectCount: 10)",
+            "value": 5114403.125,
+            "unit": "ns",
+            "range": "± 194317.91125985587"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 20, ObjectCount: 100)",
+            "value": 5322365.625,
+            "unit": "ns",
+            "range": "± 127389.37074678561"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 200, ObjectCount: 10)",
+            "value": 4916264.0625,
+            "unit": "ns",
+            "range": "± 90530.11085740519"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 200, ObjectCount: 100)",
+            "value": 5172391.272321428,
+            "unit": "ns",
+            "range": "± 166287.1041657672"
           }
         ]
       }
