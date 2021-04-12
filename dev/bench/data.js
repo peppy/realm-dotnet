@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1618012164860,
+  "lastUpdate": 1618229981638,
   "repoUrl": "https://github.com/realm/realm-dotnet",
   "entries": {
     "Benchmark": [
@@ -3792,6 +3792,198 @@ window.BENCHMARK_DATA = {
             "value": 5172391.272321428,
             "unit": "ns",
             "range": "± 166287.1041657672"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "4850119+papafe@users.noreply.github.com",
+            "name": "Ferdinando Papale",
+            "username": "papafe"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "427338bcdf3bcf0a090cb212ae5fa4253cfc1558",
+          "message": "Implement Mixed data type (#2252)\n\n* Complete refactor of RealmMetadata and use of TableKey for handles\r\n\r\n* Updated core\r\n\r\n* Corrected core branch\r\n\r\n* Revert \"Corrected core branch\"\r\n\r\nThis reverts commit 998280d13264ae8934ab6cdeeefdd51a17650a6c.\r\n\r\n* Updated core commit\r\n\r\n* Update for CI\r\n\r\n* Corrected core\r\n\r\n* Small corrections\r\n\r\n* Added initial test case\r\n\r\n* Added corrections\r\n\r\n* Corrected name\r\n\r\n* Correction to comments\r\n\r\n* Added nullability of Mixed\r\n\r\n* Added special case for realm value type in weaver\r\n\r\n* Correction to order of call\r\n\r\n* Added first step\r\n\r\n* Added example of test\r\n\r\n* Added comments\r\n\r\n* Added missing case in equality\r\n\r\n* Adde ground cases\r\n\r\n* Added Tests for Nullable\r\n\r\n* Added new tests\r\n\r\n* Added table_key return value\r\n\r\n* Improved tests\r\n\r\n* Simplified weaver\r\n\r\n* Small corrections\r\n\r\n* Removed argument fromc RealmCollectionBase\r\n\r\n* Improvements\r\n\r\n* Added back test for lists\r\n\r\n* Updated core\r\n\r\n* Removed unused variable\r\n\r\n* Getting tablekey from get methods in collections\r\n\r\n* Small corrections\r\n\r\n* Corrections to the way table_key is retrieved\r\n\r\n* Passing tablekey in primitive value\r\n\r\n* Added list notification tests + corrected error in wrappers\r\n\r\n* Removed useless part from tests.proj\r\n\r\n* Added tests for dictionary and removed testcasesource\r\n\r\n* Final corrections\r\n\r\n* Removed comment\r\n\r\n* Corrections according to PR\r\n\r\n* Corrected operator\r\n\r\n* Small correction according to PR\r\n\r\n* Changed the way find works in results\r\n\r\n* Added test for indexOf with list\r\n\r\n* Added special case for strings\r\n\r\n* Added tests\r\n\r\n* Improving tests\r\n\r\n* Simplified code\r\n\r\n* Added query for realmvaluetype\r\n\r\n* Updated core to latest v11\r\n\r\n* Refactoring of test cases\r\n\r\n* Huge refactoring of collection tests\r\n\r\n* Continued refactoring\r\n\r\n* Updated to latest core-v11\r\n\r\n* Revert \"Updated to latest core-v11\"\r\n\r\nThis reverts commit 183931af196fe6c5ba726112c7066f124e464e47.\r\n\r\n* Correction to test object\r\n\r\n* Small refactoring, updated core branch\r\n\r\n* Improved testing for queries\r\n\r\n* Test improvements\r\n\r\n* Correction to dynamic\r\n\r\n* Added dynamic tests\r\n\r\n* Moved dynamic tests\r\n\r\n* removed unnecessary method\r\n\r\n* Small corrections\r\n\r\n* Added test for dictionaries\r\n\r\n* Small corrections\r\n\r\n* Refactored listOfPrimitiveTests\r\n\r\n* Removed collection tests\r\n\r\n* Small correction pre-pr\r\n\r\n* Equality improvements\r\n\r\n* Added set tests\r\n\r\n* Fixes\r\n\r\n* Added decimal test for set\r\n\r\n* wip\r\n\r\n* Add dictionary tests\r\n\r\n* Small corrections\r\n\r\n* Additions\r\n\r\n* Added generic properties tests and Set/Dict<RealmValue> tests\r\n\r\n* Simplified tests\r\n\r\n* Updated changelog\r\n\r\n* Corrected collection tests for queries (and updated core version)\r\n\r\n* Small corrections\r\n\r\n* Increased core version plus small fix\r\n\r\n* Small correction\r\n\r\n* Improvements\r\n\r\n* Added corrections for sync tests\r\n\r\n* Correction to query in wrappers\r\n\r\n* Added ObjectType\r\n\r\n* From merge\r\n\r\n* Changes with Nikola\r\n\r\n* Store the looked up schema in the binding context (#2328)\r\n\r\n* Store the looked up schema in the context\r\n\r\n* Bump to latest Core\r\n\r\n* fix some warnings\r\n\r\n* Fix build\r\n\r\n* Final cleanup\r\n\r\nCo-authored-by: Nikola Irinchev <irinchev@me.com>",
+          "timestamp": "2021-04-12T13:47:36+02:00",
+          "tree_id": "a6ba71868635d5c170dd3c38c44085cacf95d306",
+          "url": "https://github.com/realm/realm-dotnet/commit/427338bcdf3bcf0a090cb212ae5fa4253cfc1558"
+        },
+        "date": 1618229957764,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 10)",
+            "value": 199735.46223958334,
+            "unit": "ns",
+            "range": "± 603.309238176187"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 100)",
+            "value": 199890.68196614584,
+            "unit": "ns",
+            "range": "± 505.13522865965"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 1000)",
+            "value": 209836.35091145834,
+            "unit": "ns",
+            "range": "± 542.8611953446357"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 10)",
+            "value": 36961.368669782365,
+            "unit": "ns",
+            "range": "± 293.41387753407685"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 100)",
+            "value": 109294.0678187779,
+            "unit": "ns",
+            "range": "± 3069.7215413056024"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 1000)",
+            "value": 837557.6627604166,
+            "unit": "ns",
+            "range": "± 8551.478592129552"
+          },
+          {
+            "name": "PerformanceTests.ObjectTests.GetPropertyValue",
+            "value": 1375.909752315945,
+            "unit": "ns",
+            "range": "± 29.1533545449722"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 20)",
+            "value": 432.2593371073405,
+            "unit": "ns",
+            "range": "± 0.9635703695552048"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 100)",
+            "value": 1203.585433959961,
+            "unit": "ns",
+            "range": "± 2.0120685753911554"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 1000)",
+            "value": 12860.27598063151,
+            "unit": "ns",
+            "range": "± 22.028631965167985"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 20)",
+            "value": 4643.56929234096,
+            "unit": "ns",
+            "range": "± 37.046228290939915"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 100)",
+            "value": 5325.451405843099,
+            "unit": "ns",
+            "range": "± 46.80645729611952"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 1000)",
+            "value": 14232.992671086238,
+            "unit": "ns",
+            "range": "± 27.483311653434637"
+          },
+          {
+            "name": "PerformanceTests.ObjectTests.SetPropertyValue",
+            "value": 369.14452234903973,
+            "unit": "ns",
+            "range": "± 0.6576467062941788"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 20)",
+            "value": 714.8919900258383,
+            "unit": "ns",
+            "range": "± 3.53418719155976"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 100)",
+            "value": 901.8886089324951,
+            "unit": "ns",
+            "range": "± 2.7248946921166515"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 1000)",
+            "value": 5516.822638878455,
+            "unit": "ns",
+            "range": "± 5.282288087963194"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 128, ObjectCount: 10)",
+            "value": 11515785.422036082,
+            "unit": "ns",
+            "range": "± 2292742.4556214614"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 128, ObjectCount: 100)",
+            "value": 11695748.25,
+            "unit": "ns",
+            "range": "± 2477708.361610246"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1024, ObjectCount: 10)",
+            "value": 10507100.962752525,
+            "unit": "ns",
+            "range": "± 2029568.7242987538"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1024, ObjectCount: 100)",
+            "value": 10913371.272786459,
+            "unit": "ns",
+            "range": "± 2074115.3338203519"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1048576, ObjectCount: 10)",
+            "value": 10102263.03228022,
+            "unit": "ns",
+            "range": "± 1541029.2394868992"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1048576, ObjectCount: 100)",
+            "value": 16339818.085106382,
+            "unit": "ns",
+            "range": "± 5513756.676293245"
+          },
+          {
+            "name": "PerformanceTests.EmptyWriteTests.Write",
+            "value": 35511806.2006579,
+            "unit": "ns",
+            "range": "± 27613127.799203873"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 20, ObjectCount: 10)",
+            "value": 14142551.764705881,
+            "unit": "ns",
+            "range": "± 3323642.755684223"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 20, ObjectCount: 100)",
+            "value": 13858581.409801137,
+            "unit": "ns",
+            "range": "± 1539026.4425521595"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 200, ObjectCount: 10)",
+            "value": 13186477.490234375,
+            "unit": "ns",
+            "range": "± 1522712.0170428513"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 200, ObjectCount: 100)",
+            "value": 9841826.446143618,
+            "unit": "ns",
+            "range": "± 1785264.4090406294"
           }
         ]
       }
