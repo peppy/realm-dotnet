@@ -37,7 +37,7 @@ using Realms.Sync;
 
 namespace Realms
 {
-    public interface IRealmClass
+    public interface IRealmObject
     {
         void CopyToRealm();
     }
@@ -629,7 +629,7 @@ namespace Realms
             obj.SetOwner(this, objectHandle, metadata);
 
             // If an object is newly created, we don't need to invoke setters of properties with default values.
-            if (obj is IRealmClass rc)
+            if (obj is IRealmObject rc)
             {
                 rc.CopyToRealm();
             }

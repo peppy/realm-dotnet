@@ -16,16 +16,13 @@
 // //
 // ////////////////////////////////////////////////////////////////////////////
 
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 using Realm.Generator;
 
 namespace Realms.Tests.Database
 {
+    // RealmPropertiesGenerator
     [RealmClass]
     public partial class SimpleObject : RealmObject
     {
@@ -33,53 +30,107 @@ namespace Realms.Tests.Database
         private string stringValue;
     }
 
+    // RealmClassGenerator
+    public interface ISimplePerson : IRealmObject
+    {
+        public int Id { get; set; }
+
+        public string Name { get; set; }
+    }
+
     [TestFixture, Preserve(AllMembers = true)]
     public class AAAAAAGeneratorTests : RealmInstanceTest
     {
         [Test]
-        public void TestA()
+        public void RealmPropertiesGenerator()
         {
             var intValue = 1;
             var stringValue = "bla";
 
-            var standalone = new SimpleObject
+            var simpleObject = new SimpleObject
             {
                 IntValue = intValue,
                 StringValue = stringValue,
             };
 
-            Assert.That(standalone.IntValue, Is.EqualTo(intValue));
-            Assert.That(standalone.StringValue, Is.EqualTo(stringValue));
+            Assert.That(simpleObject.IntValue, Is.EqualTo(intValue));
+            Assert.That(simpleObject.StringValue, Is.EqualTo(stringValue));
 
             _realm.Write(() =>
             {
-                _realm.Add(standalone, update: true);
+                _realm.Add(simpleObject, update: true);
             });
 
-            Assert.That(standalone.IsManaged, Is.True);
+            Assert.That(simpleObject.IsManaged, Is.True);
 
-            Assert.That(standalone.IntValue, Is.EqualTo(intValue));
-            Assert.That(standalone.StringValue, Is.EqualTo(stringValue));
+            Assert.That(simpleObject.IntValue, Is.EqualTo(intValue));
+            Assert.That(simpleObject.StringValue, Is.EqualTo(stringValue));
 
             var queried = _realm.All<SimpleObject>().First();
-            Assert.That(queried.IntValue, Is.EqualTo(standalone.IntValue));
-            Assert.That(queried.StringValue, Is.EqualTo(standalone.StringValue));
+            Assert.That(queried.IntValue, Is.EqualTo(simpleObject.IntValue));
+            Assert.That(queried.StringValue, Is.EqualTo(simpleObject.StringValue));
 
             intValue = 5;
             stringValue = "abracadabra";
 
             _realm.Write(() =>
             {
-                standalone.IntValue = intValue;
-                standalone.StringValue = stringValue;
+                simpleObject.IntValue = intValue;
+                simpleObject.StringValue = stringValue;
             });
 
-            Assert.That(standalone.IntValue, Is.EqualTo(intValue));
-            Assert.That(standalone.StringValue, Is.EqualTo(stringValue));
+            Assert.That(simpleObject.IntValue, Is.EqualTo(intValue));
+            Assert.That(simpleObject.StringValue, Is.EqualTo(stringValue));
 
             queried = _realm.All<SimpleObject>().First();
-            Assert.That(queried.IntValue, Is.EqualTo(standalone.IntValue));
-            Assert.That(queried.StringValue, Is.EqualTo(standalone.StringValue));
+            Assert.That(queried.IntValue, Is.EqualTo(simpleObject.IntValue));
+            Assert.That(queried.StringValue, Is.EqualTo(simpleObject.StringValue));
+        }
+
+        [Test]
+        public void RealmClassGenerator()
+        {
+            var id = 1;
+            var name = "Mary";
+
+            var simplePerson = new SimplePerson
+            {
+                Id = id,
+                Name = name,
+            };
+
+            Assert.That(simplePerson.Id, Is.EqualTo(id));
+            Assert.That(simplePerson.Name, Is.EqualTo(name));
+
+            _realm.Write(() =>
+            {
+                _realm.Add(simplePerson, update: true);
+            });
+
+            Assert.That(simplePerson.IsManaged, Is.True);
+
+            Assert.That(simplePerson.Id, Is.EqualTo(id));
+            Assert.That(simplePerson.Name, Is.EqualTo(name));
+
+            var queried = _realm.All<SimplePerson>().First();
+            Assert.That(queried.Id, Is.EqualTo(simplePerson.Id));
+            Assert.That(queried.Name, Is.EqualTo(simplePerson.Name));
+
+            id = 5;
+            name = "Luis";
+
+            _realm.Write(() =>
+            {
+                simplePerson.Id = id;
+                simplePerson.Name = name;
+            });
+
+            Assert.That(simplePerson.Id, Is.EqualTo(id));
+            Assert.That(simplePerson.Name, Is.EqualTo(name));
+
+            queried = _realm.All<SimplePerson>().First();
+            Assert.That(queried.Id, Is.EqualTo(simplePerson.Id));
+            Assert.That(queried.Name, Is.EqualTo(simplePerson.Name));
         }
     }
 }

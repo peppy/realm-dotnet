@@ -61,9 +61,11 @@ namespace Realm.Generator
             var usingsSource = GenerateUsingStrings(syntaxReceiver.UsingDeclarations);
 
             var classStartSource = $@"
+                using System;
+
                 namespace {namespaceName}
                 {{
-                    public partial class {className} : IRealmClass
+                    public partial class {className} : IRealmObject
                     {{
                 ";
                             var classEndSource = @"
