@@ -16,6 +16,7 @@
 // //
 // ////////////////////////////////////////////////////////////////////////////
 
+using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using Realm.Generator;
@@ -36,6 +37,9 @@ namespace Realms.Tests.Database
         public int Id { get; set; }
 
         public string Name { get; set; }
+
+        public IList<int> IntList { get; }
+
     }
 
     [TestFixture, Preserve(AllMembers = true)]

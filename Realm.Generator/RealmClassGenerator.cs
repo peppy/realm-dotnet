@@ -16,7 +16,6 @@
 // //
 // ////////////////////////////////////////////////////////////////////////////
 
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -31,6 +30,8 @@ namespace Realm.Generator
     [Generator]
     public class RealmClassGenerator : ISourceGenerator
     {
+        INamedTypeSymbol IListTypeSymbol;
+
         public void Initialize(GeneratorInitializationContext context)
         {
             //This is executed once before all the "execute" steps
@@ -51,9 +52,10 @@ namespace Realm.Generator
                 return;
             }
 
+            IListTypeSymbol ??= context.Compilation.GetTypeByMetadataName("System.Collections.Generic.IList`1");
+
             var interfaceNode = syntaxReceiver.InterfaceDeclaration;
             var model = context.Compilation.GetSemanticModel(interfaceNode.SyntaxTree);
-
             var interfaceName = interfaceNode.Identifier.ValueText;
             var namespaceName = syntaxReceiver.Namespace;
             var className = interfaceName.Substring(1);  //Not robust
@@ -81,11 +83,9 @@ namespace Realm.Generator
 
             foreach (var property in propertiesDeclarations)
             {
-                var propertySymbol = model.GetDeclaredSymbol(property) as IPropertySymbol;
-                var type = propertySymbol.Type.Name;
-                var name = propertySymbol.Name;
+                var propertySymbol = model.GetDeclaredSymbol(property);
 
-                (var propertyString, var copyToRealmPropertyString) = GeneratePropertyStrings(type, name);
+                (var propertyString, var copyToRealmPropertyString) = GeneratePropertyStrings(propertySymbol);
                 propertiesSourceBuilder.Append(propertyString);
                 copyToRealmSourceBuilder.Append(copyToRealmPropertyString);
             }
@@ -110,21 +110,54 @@ namespace Realm.Generator
             return string.Join("", usingDeclarations.Select(ud => ud.ToFullString()));
         }
 
-        private (string PropertyString, string CopyToRealmPropertyString) GeneratePropertyStrings(string type, string name)
+        private (string PropertyString, string CopyToRealmPropertyString) GeneratePropertyStrings(IPropertySymbol propertySymbol)
         {
-            var backingFieldName = $"_{name}";
-            var propertyName = name.FirstCharToUpper();
+            var type = propertySymbol.Type as INamedTypeSymbol;
+            var typeName = type.Name;
 
-            var propertyString = $@"
-                private {type} {backingFieldName};
+            var backingFieldName = $"_{propertySymbol.Name.ToLower()}";
+            var propertyName = propertySymbol.Name;
 
-                public {type} {propertyName} 
+            //OriginalDefinition is used to get IList<T>, otherwise the comparison returns false because type is IList<something_else>
+            if (SymbolEqualityComparer.Default.Equals(type.OriginalDefinition, IListTypeSymbol))
+            {
+                var typeArgument = type.TypeArguments.First(); //TODO It could contain more than one...
+                var typeArgumentName = typeArgument.Name;
+                var fullTypeName = $"IList<{typeArgumentName}>";
+                var propertyString = $@"
+                private {fullTypeName} {backingFieldName};
+
+                public {fullTypeName} {propertyName} 
                 {{
                     get 
                     {{
                         if (IsManaged)
                         {{
-                            return ({type})GetValue(""{propertyName}"");
+                            return GetListValue<{typeArgumentName}>(""{propertyName}"");
+                        }}
+                        else
+                        {{
+                            return {backingFieldName};
+                        }}
+                    }}
+                }}";
+
+                var copyToRealmPropertyString = $"{propertyName} = {backingFieldName};\n";
+
+                return (propertyString, copyToRealmPropertyString);
+            }
+            else
+            {
+                var propertyString = $@"
+                private {typeName} {backingFieldName};
+
+                public {typeName} {propertyName} 
+                {{
+                    get 
+                    {{
+                        if (IsManaged)
+                        {{
+                            return ({typeName})GetValue(""{propertyName}"");
                         }}
                         else
                         {{
@@ -144,9 +177,11 @@ namespace Realm.Generator
                     }}
                 }}";
 
-            var copyToRealmPropertyString = $"{propertyName} = {backingFieldName};\n";
+                var copyToRealmPropertyString = $"{propertyName} = {backingFieldName};\n";
 
-            return (propertyString, copyToRealmPropertyString);
+                return (propertyString, copyToRealmPropertyString);
+            }
+
         }
 
         class RealmClassSyntaxReceiver : ISyntaxContextReceiver
@@ -159,8 +194,6 @@ namespace Realm.Generator
             {
                 if (context.Node is InterfaceDeclarationSyntax interfaceSyntax) // && ImplementsInterface(context.SemanticModel, interfaceSyntax, "RealmClass"))
                 {
-                    //Debugger.Launch();
-
                     var interfaceSymbol = context.SemanticModel.GetDeclaredSymbol(interfaceSyntax);
 
                     if (!interfaceSymbol.AllInterfaces.Any(i => i.Name == "IRealmObject"))
