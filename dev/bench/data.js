@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1620730952638,
+  "lastUpdate": 1620811425316,
   "repoUrl": "https://github.com/realm/realm-dotnet",
   "entries": {
     "Benchmark": [
@@ -7440,6 +7440,198 @@ window.BENCHMARK_DATA = {
             "value": 8632414.791666666,
             "unit": "ns",
             "range": "± 478434.4006057687"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "andrea.catalini89@gmail.com",
+            "name": "Andrea Catalini",
+            "username": "LaPeste"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "5e8efd12cc502bb981bd7938183e74cea1844ad3",
+          "message": "Run tests on Windows .net framework (#2342)\n\n* Try to build nuget pkg\r\n\r\n* Try to build nuget pkg - 1\r\n\r\n* Try to build nuget pkg - 2\r\n\r\n* Try to build nuget pkg - 3\r\n\r\n* Try to build nuget pkg - 4\r\n\r\n* First main from template\r\n\r\n* Main template finished\r\n\r\n* Store artifact with right name + PR feedback\r\n\r\n* Store artifact with right name - 1\r\n\r\n* Forgotten brackets\r\n\r\n* Fix bash\r\n\r\n* Fix bash - 1\r\n\r\n* Fix bash - 2\r\n\r\n* Fix bash - 3\r\n\r\n* Fix bash - 4\r\n\r\n* Fix bash - 5\r\n\r\n* Removed echos and added the template\r\n\r\n* Added versionSuffix\r\n\r\n* Added versionSuffix - 1\r\n\r\n* More bash work\r\n\r\n* More bash work - 1\r\n\r\n* Move from env vars to outputs\r\n\r\n* Move from env vars to outputs - 1\r\n\r\n* Fixed an error in upload artifact\r\n\r\n* Added updated template\r\n\r\n* Added suffix to job output\r\n\r\n* Added suffix to nupkg name\r\n\r\n* Added suffix to nupkg name - 1\r\n\r\n* PR feedback\r\n\r\n* Removed unused job output\r\n\r\n* Removed unused job output - 1\r\n\r\n* Removed unused job output - 2\r\n\r\n* Fixed a misspell\r\n\r\n* Split nuget package creation in 3 parts\r\n\r\n* PR feedback\r\n\r\n* First attempt to run win tests\r\n\r\n* Forgotten dependency on building\r\n\r\n* Wrong patg on fetching artifacts\r\n\r\n* Wrong patg on fetching artifacts - 1\r\n\r\n* Templated test\r\n\r\n* Templated test - 1\r\n\r\n* Templated test - 2\r\n\r\n* Fixed name for nupkg\r\n\r\n* Corrected download path for nupkg artifacts\r\n\r\n* Added restore flag to test building\r\n\r\n* Added restore flag to test building - 1\r\n\r\n* Added restore flag to test building - 2\r\n\r\n* Added restore flag to test building - 3\r\n\r\n* Added restore flag to test building - 4\r\n\r\n* Fixed test results path\r\n\r\n* Corrected output name for pkg version var\r\n\r\n* Fixed a rebase conflict\r\n\r\n* Fixed ref to var\r\n\r\n* Little refactor for findPkg function\r\n\r\n* Fix for test report plugin\r\n\r\n* Forgotten to readd\r\n\r\n* Run tests read release from var\r\n\r\n* More PR feedback\r\n\r\n* More PR feedback\r\n\r\n* Conform id\r\n\r\n* Some missing update of id name\r\n\r\n* Some missing update of id name - 1\r\n\r\n* Added conf in ytt for tests\r\n\r\n* Removed tests reslut comments in PR + renamed test results\r\n\r\n* Fetch only Realm and Fody for tests\r\n\r\n* Made a function for building win tests\r\n\r\n* Feedback from PR\r\n\r\n* Made msbuild command a cross-platform one\r\n\r\n* Changed signature of buildNetFrameworkTest\r\n\r\n* Fixed path for test results\r\n\r\n* Better signature for msbuild function\r\n\r\n* Added more flexibility to msbuild\r\n\r\n* Slight change in signature for msbuild",
+          "timestamp": "2021-05-12T11:04:27+02:00",
+          "tree_id": "a3d6edd37ebe83db8891398a4b1dffe381f05db5",
+          "url": "https://github.com/realm/realm-dotnet/commit/5e8efd12cc502bb981bd7938183e74cea1844ad3"
+        },
+        "date": 1620811378503,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 10)",
+            "value": 275299.6354166667,
+            "unit": "ns",
+            "range": "± 3360.370896647985"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 100)",
+            "value": 280659.48181152344,
+            "unit": "ns",
+            "range": "± 5268.5988404967875"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 1000)",
+            "value": 289740.9005301339,
+            "unit": "ns",
+            "range": "± 4657.904176594404"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 10)",
+            "value": 57749.4140625,
+            "unit": "ns",
+            "range": "± 665.499333718547"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 100)",
+            "value": 143331.94482421875,
+            "unit": "ns",
+            "range": "± 3776.753939081858"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 1000)",
+            "value": 1013240.0756835938,
+            "unit": "ns",
+            "range": "± 16651.74237108583"
+          },
+          {
+            "name": "PerformanceTests.ObjectTests.GetPropertyValue",
+            "value": 1463.815466562907,
+            "unit": "ns",
+            "range": "± 30.191622501326915"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 20)",
+            "value": 525.1821449824741,
+            "unit": "ns",
+            "range": "± 9.262417453691747"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 100)",
+            "value": 1356.186974843343,
+            "unit": "ns",
+            "range": "± 11.487255708483328"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 1000)",
+            "value": 13453.611210414341,
+            "unit": "ns",
+            "range": "± 202.3991634798068"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 20)",
+            "value": 6090.489417628238,
+            "unit": "ns",
+            "range": "± 129.2591563219259"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 100)",
+            "value": 7120.985555648804,
+            "unit": "ns",
+            "range": "± 138.5596731299087"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 1000)",
+            "value": 16706.220372517902,
+            "unit": "ns",
+            "range": "± 429.9484697904778"
+          },
+          {
+            "name": "PerformanceTests.ObjectTests.SetPropertyValue",
+            "value": 449.79472637176514,
+            "unit": "ns",
+            "range": "± 4.133834974289499"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 20)",
+            "value": 903.4740209579468,
+            "unit": "ns",
+            "range": "± 10.988636569134155"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 100)",
+            "value": 1131.2262120454209,
+            "unit": "ns",
+            "range": "± 22.547324807676002"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 1000)",
+            "value": 6213.2750034332275,
+            "unit": "ns",
+            "range": "± 118.3749357598004"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 128, ObjectCount: 10)",
+            "value": 4798678.90625,
+            "unit": "ns",
+            "range": "± 186748.79105863304"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 128, ObjectCount: 100)",
+            "value": 4789781.010584678,
+            "unit": "ns",
+            "range": "± 142610.14497690706"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1024, ObjectCount: 10)",
+            "value": 4890971.203613281,
+            "unit": "ns",
+            "range": "± 224668.85709920217"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1024, ObjectCount: 100)",
+            "value": 4815657.488364362,
+            "unit": "ns",
+            "range": "± 187552.90114761738"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1048576, ObjectCount: 10)",
+            "value": 5282341.761363637,
+            "unit": "ns",
+            "range": "± 289127.5967371106"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1048576, ObjectCount: 100)",
+            "value": 8518600,
+            "unit": "ns",
+            "range": "± 546548.1343359132"
+          },
+          {
+            "name": "PerformanceTests.EmptyWriteTests.Write",
+            "value": 4708618.229166667,
+            "unit": "ns",
+            "range": "± 214489.22705697946"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 20, ObjectCount: 10)",
+            "value": 4989628.975183823,
+            "unit": "ns",
+            "range": "± 160639.50781631988"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 20, ObjectCount: 100)",
+            "value": 4935474.057112069,
+            "unit": "ns",
+            "range": "± 141108.43508012258"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 200, ObjectCount: 10)",
+            "value": 4982533.917682927,
+            "unit": "ns",
+            "range": "± 177473.51067317306"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 200, ObjectCount: 100)",
+            "value": 5063813.458806818,
+            "unit": "ns",
+            "range": "± 120802.97611746842"
           }
         ]
       }
