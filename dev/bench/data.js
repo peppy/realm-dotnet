@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1621579670051,
+  "lastUpdate": 1621945523771,
   "repoUrl": "https://github.com/realm/realm-dotnet",
   "entries": {
     "Benchmark": [
@@ -8592,6 +8592,198 @@ window.BENCHMARK_DATA = {
             "value": 4950613.941688145,
             "unit": "ns",
             "range": "± 318529.9602153637"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "andrea.catalini89@gmail.com",
+            "name": "Andrea Catalini",
+            "username": "LaPeste"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "87eab4a3bff447101d572c64202453b311a779ad",
+          "message": "CI - Add .Netcore, .Net5, Xamarin on MacOs, Weaver tests (#2354)\n\n* Try to build nuget pkg\r\n\r\n* Try to build nuget pkg - 1\r\n\r\n* Try to build nuget pkg - 2\r\n\r\n* Try to build nuget pkg - 3\r\n\r\n* Try to build nuget pkg - 4\r\n\r\n* First main from template\r\n\r\n* Main template finished\r\n\r\n* Store artifact with right name + PR feedback\r\n\r\n* Store artifact with right name - 1\r\n\r\n* Forgotten brackets\r\n\r\n* Fix bash\r\n\r\n* Fix bash - 1\r\n\r\n* Fix bash - 2\r\n\r\n* Fix bash - 3\r\n\r\n* Fix bash - 4\r\n\r\n* Fix bash - 5\r\n\r\n* Removed echos and added the template\r\n\r\n* Added versionSuffix\r\n\r\n* Added versionSuffix - 1\r\n\r\n* More bash work\r\n\r\n* More bash work - 1\r\n\r\n* Move from env vars to outputs\r\n\r\n* Move from env vars to outputs - 1\r\n\r\n* Fixed an error in upload artifact\r\n\r\n* Added updated template\r\n\r\n* Added suffix to job output\r\n\r\n* Added suffix to nupkg name\r\n\r\n* Added suffix to nupkg name - 1\r\n\r\n* PR feedback\r\n\r\n* Removed unused job output\r\n\r\n* Removed unused job output - 1\r\n\r\n* Removed unused job output - 2\r\n\r\n* Fixed a misspell\r\n\r\n* Split nuget package creation in 3 parts\r\n\r\n* PR feedback\r\n\r\n* First attempt to run win tests\r\n\r\n* Forgotten dependency on building\r\n\r\n* Wrong patg on fetching artifacts\r\n\r\n* Wrong patg on fetching artifacts - 1\r\n\r\n* Templated test\r\n\r\n* Templated test - 1\r\n\r\n* Templated test - 2\r\n\r\n* Fixed name for nupkg\r\n\r\n* Corrected download path for nupkg artifacts\r\n\r\n* Added restore flag to test building\r\n\r\n* Added restore flag to test building - 1\r\n\r\n* Added restore flag to test building - 2\r\n\r\n* Added restore flag to test building - 3\r\n\r\n* Added restore flag to test building - 4\r\n\r\n* Fixed test results path\r\n\r\n* Corrected output name for pkg version var\r\n\r\n* Fixed a rebase conflict\r\n\r\n* Fixed ref to var\r\n\r\n* Little refactor for findPkg function\r\n\r\n* Fix for test report plugin\r\n\r\n* Forgotten to readd\r\n\r\n* Run tests read release from var\r\n\r\n* More PR feedback\r\n\r\n* More PR feedback\r\n\r\n* Conform id\r\n\r\n* Some missing update of id name\r\n\r\n* Some missing update of id name - 1\r\n\r\n* Added conf in ytt for tests\r\n\r\n* Removed tests reslut comments in PR + renamed test results\r\n\r\n* Fetch only Realm and Fody for tests\r\n\r\n* Made a function for building win tests\r\n\r\n* Added tests for netcore and net5\r\n\r\n* Forgotten dependency on previous steps\r\n\r\n* Forgotten checkout\r\n\r\n* Fetch artifacts\r\n\r\n* Made test result submission a function and split build and run in 2 steps\r\n\r\n* Feedback from PR\r\n\r\n* Made msbuild command a cross-platform one\r\n\r\n* Changed signature of buildNetFrameworkTest\r\n\r\n* Moved xamarin macOS tests over\r\n\r\n* Fixed path for test results\r\n\r\n* Fixed path for test results\r\n\r\n* Added tests for weaver\r\n\r\n* The workflow stopped to be trigger, checking why\r\n\r\n* The workflow stopped to be trigger - reverted\r\n\r\n* Small fixes\r\n\r\n* Minor change\r\n\r\n* Better signature for msbuild function\r\n\r\n* Applied changes for new function signature\r\n\r\n* Attempt at transform xunit test results to junit format\r\n\r\n* Rearraged new code\r\n\r\n* Added missing params in msbuild for XamarinMac\r\n\r\n* Changed option for published test results\r\n\r\n* Added dotnetBuild function, simplified run testing and simplified msbuild function\r\n\r\n* Added function for dotnet run and other small fixes\r\n\r\n* Removed non-needed file\r\n\r\n* Replaced file with a link to it\r\n\r\n* Made a parameter not optional\r\n\r\n* Trying to fix not found exe\r\n\r\n* Trying to launch tests from terminal\r\n\r\n* Trying to launch tests from terminal - 1\r\n\r\n* Trying to launch tests from terminal - 2\r\n\r\n* Trying to launch tests from terminal - 3\r\n\r\n* Replaced dotnet build with dotnet publish\r\n\r\n* Replaced dotnet build with dotnet publish - 1\r\n\r\n* Replaced dotnet build with dotnet publish - 2\r\n\r\n* Replaced dotnet build with dotnet publish - 3\r\n\r\n* Replaced dotnet build with dotnet publish - 4\r\n\r\n* Replaced dotnet build with dotnet publish - 5\r\n\r\n* Replaced dotnet build with dotnet publish - 6\r\n\r\n* Replaced dotnet build with dotnet publish - 7\r\n\r\n* Replaced dotnet build with dotnet publish - 8\r\n\r\n* Replaced dotnet build with dotnet publish - 0\r\n\r\n* Use linked file instead of having a copied code from TestHelpers\r\n\r\n* Fixed a small issue and no more fail if an element of a matrix job fails\r\n\r\n* Proper split of CopyBundledFileToDocuments and TransformTestResults\r\n\r\n* Deleted useless file\r\n\r\n* Minor cleanup\r\n\r\n* Minor detail before review\r\n\r\n* Fix for XamarinMac failing to find test results\r\n\r\n* Allow C# 8 \"using\" syntax in fody since it targets also net472\r\n\r\n* Fix a few GA nits (#2382)\r\n\r\n* test test test\r\n\r\n* doh\r\n\r\n* don't add the test stuff all the time\r\n\r\n* make realm.fody.tests executable\r\n\r\n* Minor changes from PR feedback\r\n\r\nCo-authored-by: Nikola Irinchev <irinchev@me.com>",
+          "timestamp": "2021-05-25T14:07:42+02:00",
+          "tree_id": "d8c9cd426a86dacddeba92e15eba81c3d2921e5b",
+          "url": "https://github.com/realm/realm-dotnet/commit/87eab4a3bff447101d572c64202453b311a779ad"
+        },
+        "date": 1621945497415,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 10)",
+            "value": 276033.19627192983,
+            "unit": "ns",
+            "range": "± 11862.284673801487"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 100)",
+            "value": 273260.82621729653,
+            "unit": "ns",
+            "range": "± 10007.745251812054"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 1000)",
+            "value": 282446.8055138221,
+            "unit": "ns",
+            "range": "± 7594.819802650029"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 10)",
+            "value": 47863.810221354164,
+            "unit": "ns",
+            "range": "± 864.1120981271667"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 100)",
+            "value": 118703.25055803571,
+            "unit": "ns",
+            "range": "± 2045.1839283060772"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 1000)",
+            "value": 883057.7085433467,
+            "unit": "ns",
+            "range": "± 26951.39654316813"
+          },
+          {
+            "name": "PerformanceTests.ObjectTests.GetPropertyValue",
+            "value": 1314.5724573443013,
+            "unit": "ns",
+            "range": "± 39.479035927905706"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 20)",
+            "value": 448.117488861084,
+            "unit": "ns",
+            "range": "± 11.631879035936906"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 100)",
+            "value": 1207.9138730023358,
+            "unit": "ns",
+            "range": "± 40.24198276857459"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 1000)",
+            "value": 11578.896539861506,
+            "unit": "ns",
+            "range": "± 275.8793987997569"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 20)",
+            "value": 4959.6668536846455,
+            "unit": "ns",
+            "range": "± 204.36662813445608"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 100)",
+            "value": 5899.947934034394,
+            "unit": "ns",
+            "range": "± 197.6809684941688"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 1000)",
+            "value": 14304.256846110025,
+            "unit": "ns",
+            "range": "± 255.0290391371321"
+          },
+          {
+            "name": "PerformanceTests.ObjectTests.SetPropertyValue",
+            "value": 380.8691871577296,
+            "unit": "ns",
+            "range": "± 11.0197489101272"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 20)",
+            "value": 763.3540456945246,
+            "unit": "ns",
+            "range": "± 18.497047441440497"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 100)",
+            "value": 990.0808590214427,
+            "unit": "ns",
+            "range": "± 35.283984054271976"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 1000)",
+            "value": 5334.830015133589,
+            "unit": "ns",
+            "range": "± 185.06714157734802"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 128, ObjectCount: 10)",
+            "value": 4758414.51099537,
+            "unit": "ns",
+            "range": "± 130092.29175008743"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 128, ObjectCount: 100)",
+            "value": 5011248.948317308,
+            "unit": "ns",
+            "range": "± 136153.59163132095"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1024, ObjectCount: 10)",
+            "value": 5010809.6435546875,
+            "unit": "ns",
+            "range": "± 155640.43209933367"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1024, ObjectCount: 100)",
+            "value": 4938865,
+            "unit": "ns",
+            "range": "± 174056.2884814555"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1048576, ObjectCount: 10)",
+            "value": 5263714.15719697,
+            "unit": "ns",
+            "range": "± 163411.75773949345"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1048576, ObjectCount: 100)",
+            "value": 8858725.274725275,
+            "unit": "ns",
+            "range": "± 966935.0144305812"
+          },
+          {
+            "name": "PerformanceTests.EmptyWriteTests.Write",
+            "value": 4910567.1875,
+            "unit": "ns",
+            "range": "± 235019.37060409863"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 20, ObjectCount: 10)",
+            "value": 5168409.973958333,
+            "unit": "ns",
+            "range": "± 138971.28053012822"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 20, ObjectCount: 100)",
+            "value": 4999103.450520833,
+            "unit": "ns",
+            "range": "± 52293.82279724562"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 200, ObjectCount: 10)",
+            "value": 5159093.489583333,
+            "unit": "ns",
+            "range": "± 133708.9152685985"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 200, ObjectCount: 100)",
+            "value": 5193498.772321428,
+            "unit": "ns",
+            "range": "± 189440.6037832822"
           }
         ]
       }
