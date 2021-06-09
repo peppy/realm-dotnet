@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1623272575241,
+  "lastUpdate": 1623273881764,
   "repoUrl": "https://github.com/realm/realm-dotnet",
   "entries": {
     "Benchmark": [
@@ -10896,6 +10896,198 @@ window.BENCHMARK_DATA = {
             "value": 8407781.73076923,
             "unit": "ns",
             "range": "± 1019799.3228287599"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "irinchev@me.com",
+            "name": "Nikola Irinchev",
+            "username": "nirinchev"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "aa45f118f76c10c0cf1d84afbf24b1232ea5cc1b",
+          "message": "Reenable ios 32bit builds (#2431)\n\n* Reenable 32bit builds for iOS\r\n\r\n* Changelog entry\r\n\r\n* Disable bitcode generation",
+          "timestamp": "2021-06-09T22:42:44+02:00",
+          "tree_id": "f9a98fd497cdf2cf215d9cad7f2d2230d13cba2a",
+          "url": "https://github.com/realm/realm-dotnet/commit/aa45f118f76c10c0cf1d84afbf24b1232ea5cc1b"
+        },
+        "date": 1623273855205,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 10)",
+            "value": 252936.16536458334,
+            "unit": "ns",
+            "range": "± 1577.7122634015634"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 100)",
+            "value": 253230.9116908482,
+            "unit": "ns",
+            "range": "± 1732.5803846362637"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 1000)",
+            "value": 263373.2161458333,
+            "unit": "ns",
+            "range": "± 1502.7336453914565"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 10)",
+            "value": 44124.40144856771,
+            "unit": "ns",
+            "range": "± 711.2017166997947"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 100)",
+            "value": 124234.90234375,
+            "unit": "ns",
+            "range": "± 1712.7450906035015"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 1000)",
+            "value": 977037.1930803572,
+            "unit": "ns",
+            "range": "± 15259.770191382893"
+          },
+          {
+            "name": "PerformanceTests.ObjectTests.GetPropertyValue",
+            "value": 1587.5751876831055,
+            "unit": "ns",
+            "range": "± 20.702229228443716"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 20)",
+            "value": 513.4812641143799,
+            "unit": "ns",
+            "range": "± 4.782004692109947"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 100)",
+            "value": 1455.7719802856445,
+            "unit": "ns",
+            "range": "± 12.655452106101652"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 1000)",
+            "value": 15179.248453776041,
+            "unit": "ns",
+            "range": "± 95.54321295709475"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 20)",
+            "value": 5496.2729899088545,
+            "unit": "ns",
+            "range": "± 70.86366925931377"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 100)",
+            "value": 6208.906758626302,
+            "unit": "ns",
+            "range": "± 84.1687485933513"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 1000)",
+            "value": 16535.023498535156,
+            "unit": "ns",
+            "range": "± 112.88487317024553"
+          },
+          {
+            "name": "PerformanceTests.ObjectTests.SetPropertyValue",
+            "value": 437.10637251536053,
+            "unit": "ns",
+            "range": "± 2.5021897894966596"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 20)",
+            "value": 878.6741018295288,
+            "unit": "ns",
+            "range": "± 7.616343688917287"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 100)",
+            "value": 1033.2524458567302,
+            "unit": "ns",
+            "range": "± 11.42087681008461"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 1000)",
+            "value": 6545.7286541278545,
+            "unit": "ns",
+            "range": "± 49.83227105098783"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 128, ObjectCount: 10)",
+            "value": 14043559.539473685,
+            "unit": "ns",
+            "range": "± 7059537.391706736"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 128, ObjectCount: 100)",
+            "value": 7840955.768623738,
+            "unit": "ns",
+            "range": "± 1441339.7462453477"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1024, ObjectCount: 10)",
+            "value": 7285846.041666667,
+            "unit": "ns",
+            "range": "± 748440.19418234"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1024, ObjectCount: 100)",
+            "value": 7424332.0394736845,
+            "unit": "ns",
+            "range": "± 631340.4053869749"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1048576, ObjectCount: 10)",
+            "value": 7815116.4511494255,
+            "unit": "ns",
+            "range": "± 680727.3192401598"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1048576, ObjectCount: 100)",
+            "value": 11575479.775280898,
+            "unit": "ns",
+            "range": "± 1571772.8632589448"
+          },
+          {
+            "name": "PerformanceTests.EmptyWriteTests.Write",
+            "value": 7323010.15625,
+            "unit": "ns",
+            "range": "± 571831.0710273491"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 20, ObjectCount: 10)",
+            "value": 7483290.59139785,
+            "unit": "ns",
+            "range": "± 611610.2790550571"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 20, ObjectCount: 100)",
+            "value": 7336787.245244565,
+            "unit": "ns",
+            "range": "± 918451.7095076222"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 200, ObjectCount: 10)",
+            "value": 7053746.559175532,
+            "unit": "ns",
+            "range": "± 669675.7004020573"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 200, ObjectCount: 100)",
+            "value": 6919649.5827414775,
+            "unit": "ns",
+            "range": "± 502070.1421497972"
           }
         ]
       }
