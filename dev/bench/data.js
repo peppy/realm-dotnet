@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1623348849400,
+  "lastUpdate": 1623415185232,
   "repoUrl": "https://github.com/realm/realm-dotnet",
   "entries": {
     "Benchmark": [
@@ -11664,6 +11664,198 @@ window.BENCHMARK_DATA = {
             "value": 4359335.009765625,
             "unit": "ns",
             "range": "± 80899.38552891857"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "andrea.catalini89@gmail.com",
+            "name": "Andrea Catalini",
+            "username": "LaPeste"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "97dc0b7caa0d16a9e56c0a1e37aa09084c937116",
+          "message": "Run UWP tests on CI (#2384)\n\n* Store artifact with right name + PR feedback\r\n\r\n* Store artifact with right name - 1\r\n\r\n* Forgotten brackets\r\n\r\n* Fix bash\r\n\r\n* Fix bash - 1\r\n\r\n* Fix bash - 2\r\n\r\n* Fix bash - 3\r\n\r\n* Fix bash - 4\r\n\r\n* Fix bash - 5\r\n\r\n* Removed echos and added the template\r\n\r\n* Added versionSuffix\r\n\r\n* Added versionSuffix - 1\r\n\r\n* More bash work\r\n\r\n* More bash work - 1\r\n\r\n* Move from env vars to outputs\r\n\r\n* Move from env vars to outputs - 1\r\n\r\n* Fixed an error in upload artifact\r\n\r\n* Added updated template\r\n\r\n* Added suffix to job output\r\n\r\n* Added suffix to nupkg name\r\n\r\n* Added suffix to nupkg name - 1\r\n\r\n* PR feedback\r\n\r\n* Removed unused job output\r\n\r\n* Removed unused job output - 1\r\n\r\n* Removed unused job output - 2\r\n\r\n* Fixed a misspell\r\n\r\n* Split nuget package creation in 3 parts\r\n\r\n* PR feedback\r\n\r\n* First attempt to run win tests\r\n\r\n* Forgotten dependency on building\r\n\r\n* Wrong patg on fetching artifacts\r\n\r\n* Wrong patg on fetching artifacts - 1\r\n\r\n* Templated test\r\n\r\n* Templated test - 1\r\n\r\n* Templated test - 2\r\n\r\n* Fixed name for nupkg\r\n\r\n* Corrected download path for nupkg artifacts\r\n\r\n* Added restore flag to test building\r\n\r\n* Added restore flag to test building - 1\r\n\r\n* Added restore flag to test building - 2\r\n\r\n* Added restore flag to test building - 3\r\n\r\n* Added restore flag to test building - 4\r\n\r\n* Fixed test results path\r\n\r\n* Corrected output name for pkg version var\r\n\r\n* Fixed a rebase conflict\r\n\r\n* Fixed ref to var\r\n\r\n* Little refactor for findPkg function\r\n\r\n* Fix for test report plugin\r\n\r\n* Forgotten to readd\r\n\r\n* Run tests read release from var\r\n\r\n* More PR feedback\r\n\r\n* More PR feedback\r\n\r\n* Conform id\r\n\r\n* Some missing update of id name\r\n\r\n* Some missing update of id name - 1\r\n\r\n* Added conf in ytt for tests\r\n\r\n* Removed tests reslut comments in PR + renamed test results\r\n\r\n* Fetch only Realm and Fody for tests\r\n\r\n* Made a function for building win tests\r\n\r\n* Added tests for netcore and net5\r\n\r\n* Forgotten dependency on previous steps\r\n\r\n* Forgotten checkout\r\n\r\n* Fetch artifacts\r\n\r\n* Made test result submission a function and split build and run in 2 steps\r\n\r\n* Feedback from PR\r\n\r\n* Made msbuild command a cross-platform one\r\n\r\n* Changed signature of buildNetFrameworkTest\r\n\r\n* Moved xamarin macOS tests over\r\n\r\n* Fixed path for test results\r\n\r\n* Fixed path for test results\r\n\r\n* Added tests for weaver\r\n\r\n* The workflow stopped to be trigger, checking why\r\n\r\n* The workflow stopped to be trigger - reverted\r\n\r\n* Small fixes\r\n\r\n* Minor change\r\n\r\n* Better signature for msbuild function\r\n\r\n* Applied changes for new function signature\r\n\r\n* Attempt at transform xunit test results to junit format\r\n\r\n* Rearraged new code\r\n\r\n* Console launchable app + test results fully working\r\n\r\n* Fixed an issue where tests were not loaded\r\n\r\n* Added missing params in msbuild for XamarinMac\r\n\r\n* Changed option for published test results\r\n\r\n* Added dotnetBuild function, simplified run testing and simplified msbuild function\r\n\r\n* Added function for dotnet run and other small fixes\r\n\r\n* Removed non-needed file\r\n\r\n* Replaced file with a link to it\r\n\r\n* Made a parameter not optional\r\n\r\n* Trying to fix not found exe\r\n\r\n* Trying to launch tests from terminal\r\n\r\n* Trying to launch tests from terminal - 1\r\n\r\n* Trying to launch tests from terminal - 2\r\n\r\n* Trying to launch tests from terminal - 3\r\n\r\n* Replaced dotnet build with dotnet publish\r\n\r\n* Replaced dotnet build with dotnet publish - 1\r\n\r\n* Replaced dotnet build with dotnet publish - 2\r\n\r\n* Replaced dotnet build with dotnet publish - 3\r\n\r\n* Replaced dotnet build with dotnet publish - 4\r\n\r\n* Replaced dotnet build with dotnet publish - 5\r\n\r\n* Replaced dotnet build with dotnet publish - 6\r\n\r\n* Replaced dotnet build with dotnet publish - 7\r\n\r\n* Replaced dotnet build with dotnet publish - 8\r\n\r\n* Replaced dotnet build with dotnet publish - 0\r\n\r\n* Use linked file instead of having a copied code from TestHelpers\r\n\r\n* Fixed a small issue and no more fail if an element of a matrix job fails\r\n\r\n* Proper split of CopyBundledFileToDocuments and TransformTestResults\r\n\r\n* Deleted useless file\r\n\r\n* Minor cleanup\r\n\r\n* Minor detail before review\r\n\r\n* Fix for XamarinMac failing to find test results\r\n\r\n* Allow C# 8 \"using\" syntax in fody since it targets also net472\r\n\r\n* Time to test it on GAs\r\n\r\n* Fix a few GA nits (#2382)\r\n\r\n* test test test\r\n\r\n* doh\r\n\r\n* don't add the test stuff all the time\r\n\r\n* make realm.fody.tests executable\r\n\r\n* Trying to understand why CI is stuck\r\n\r\n* Trying to understand why CI is stuck - 0\r\n\r\n* Trying to understand why CI is stuck - 1\r\n\r\n* Trying to understand why CI is stuck - 2\r\n\r\n* Trying to understand why CI is stuck - 3\r\n\r\n* Trying to understand why CI is stuck - 4\r\n\r\n* Minor changes from PR feedback\r\n\r\n* Removed not needed part on namespace\r\n\r\n* Fixed template/main after merge\r\n\r\n* Added path for msbuild\r\n\r\n* Removed restore config file from UWP build command\r\n\r\n* Removed restore config file from UWP build command - 0\r\n\r\n* Removed restore config file from UWP build command - 1\r\n\r\n* Testing with realm nuget pkg version\r\n\r\n* Testing with realm nuget pkg version - 0\r\n\r\n* Testing with realm nuget pkg version - 1\r\n\r\n* Testing with realm nuget pkg version - 2\r\n\r\n* Readded UseRealmNupkgsWithVersion property to UWP proj\r\n\r\n* Readded UseRealmNupkgsWithVersion property to UWP proj - 0\r\n\r\n* Checking if NUnit nupkg is corrupted\r\n\r\n* Checking if NUnit nupkg is corrupted - 0\r\n\r\n* Checking if NUnit nupkg is corrupted - 1\r\n\r\n* Checking if NUnit nupkg is corrupted - 2\r\n\r\n* Add certificated to sign UWP app\r\n\r\n* Add certificated to sign UWP app - 0\r\n\r\n* Add certificated to sign UWP app - 1\r\n\r\n* Add certificated to sign UWP app - 2\r\n\r\n* Add certificated to sign UWP app - 3\r\n\r\n* Add certificated to sign UWP app - 4\r\n\r\n* Weird ytt bug for Nikola to look at\r\n\r\n* Add certificated to sign UWP app - 5\r\n\r\n* workaround ytt complaints\r\n\r\n* Readded temp cert\r\n\r\n* Import certificate to store\r\n\r\n* Import certificate to store - 0\r\n\r\n* Import certificate to store - 1\r\n\r\n* Import certificate to store - 2\r\n\r\n* Import certificate to store - 3\r\n\r\n* Import certificate to store - 4\r\n\r\n* Import certificate to store - 5\r\n\r\n* Import certificate to store - 6\r\n\r\n* Import certificate to store - 7\r\n\r\n* Import certificate to store - 8\r\n\r\n* Full use of msbuildOnWin\r\n\r\n* Removed action to add certificate to agent\r\n\r\n* Replaced pfx cert with a pass protected one\r\n\r\n* Replaced pfx cert with a pass protected one - 0\r\n\r\n* Modified X509KeyStorageFlags\r\n\r\n* [WIP] UWP CI tests (#2402)\r\n\r\n* Remove the certificate install\r\n\r\n* Try #2\r\n\r\n* Fix nuget config path\r\n\r\n* wip\r\n\r\n* Import certificate\r\n\r\n* Fix cert path\r\n\r\n* Try loading cert from secrets\r\n\r\n* Update password\r\n\r\n* Proper import of the certificate\r\n\r\n* Lower target OS for UWP proj\r\n\r\n* Lower target OS for UWP proj - 0\r\n\r\n* Adding missing dep for UWP\r\n\r\n* Some debug info\r\n\r\n* Some debug info - 0\r\n\r\n* Install missing appx\r\n\r\n* Install missing appx - 0\r\n\r\n* Remove useless nupkg\r\n\r\n* Install the right UWP package\r\n\r\n* Install the right UWP package - 0\r\n\r\n* Install the right UWP package - 1\r\n\r\n* Install the right UWP package - 2\r\n\r\n* Install the right UWP package - 3\r\n\r\n* Forgotten Add command\r\n\r\n* Forgotten Add command - 0\r\n\r\n* Signing UWP app through thumbprint\r\n\r\n* Readded signing key to csproj\r\n\r\n* Fixed path for installation\r\n\r\n* Trying with default install script\r\n\r\n* Trying with default install script - 0\r\n\r\n* Trying with default install script - 1\r\n\r\n* Trying with default install script - 2\r\n\r\n* Guess in the full darkness\r\n\r\n* Guess in the full darkness - 0\r\n\r\n* Guess in the full darkness - 1\r\n\r\n* Guess in the full darkness - 2\r\n\r\n* Guess in the full darkness - 3\r\n\r\n* Different attempt to start UWP process\r\n\r\n* Minor changes\r\n\r\n* Fixed an issue in parsing terminal params\r\n\r\n* Fixed copyrights\r\n\r\n* Hopefully fixes signing the UWP app\r\n\r\n* Hopefully improved signing experience\r\n\r\n* Hopefully improved signing experience - 0\r\n\r\n* Hopefully improved signing experience - 1\r\n\r\n* Hopefully improved signing experience - 2\r\n\r\n* Hopefully improved signing experience - 3\r\n\r\n* Hopefully improved signing experience - 4\r\n\r\n* Hopefully improved signing experience - 5\r\n\r\n* Hopefully improved signing experience - 6\r\n\r\n* Should be fixed for the certificate\r\n\r\n* Added some debug info\r\n\r\n* Added some debug info - 0\r\n\r\n* Maybe finally launch the UWP app\r\n\r\n* Maybe first UWP test run to end\r\n\r\n* Maybe first UWP test run to end - 0\r\n\r\n* Maybe first UWP test run to end - 1\r\n\r\n* Maybe first UWP test run to end - 2\r\n\r\n* Maybe first UWP test run to end - 4\r\n\r\n* Maybe first UWP test run to end - 5\r\n\r\n* Maybe first UWP test run to end - 6\r\n\r\n* Maybe first UWP test run to end - 7\r\n\r\n* Maybe first UWP test run to end - 8\r\n\r\n* Try to read test results\r\n\r\n* Try to read test results - 0\r\n\r\n* Try to read test results - 1\r\n\r\n* Try to read test results - 2\r\n\r\n* Some cleanup\r\n\r\n* More cleanup before PR ready\r\n\r\n* Improved parameter parsing method\r\n\r\n* Some final touches\r\n\r\n* Reworked parameter parsing\r\n\r\n* Last cleanup before review\r\n\r\n* Added nupkg to fix failing TCs\r\n\r\n* Print run output to CI\r\n\r\n* Print run output to CI - 0\r\n\r\n* Print run output to CI - 1\r\n\r\n* Print run output to CI - 2\r\n\r\n* Modified Android and iOS csproj to follow UWP\r\n\r\n* Fix mistake after merge\r\n\r\n* Applied PR feedback\r\n\r\n* Simplified TransformTestResults for UWP\r\n\r\n* Wrong file on transform\r\n\r\n* Fix CI exception if UWP app closes before check\r\n\r\n* Try to fix failing TCs in UWP\r\n\r\nCo-authored-by: Nikola Irinchev <irinchev@me.com>",
+          "timestamp": "2021-06-11T14:11:10+02:00",
+          "tree_id": "0f5243409cbdbc126b2505c2bac66d3f9c74a5c0",
+          "url": "https://github.com/realm/realm-dotnet/commit/97dc0b7caa0d16a9e56c0a1e37aa09084c937116"
+        },
+        "date": 1623415161696,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 10)",
+            "value": 214671.59075055804,
+            "unit": "ns",
+            "range": "± 980.9017514578729"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 100)",
+            "value": 215392.9833984375,
+            "unit": "ns",
+            "range": "± 643.7913764164016"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Count(ObjectCount: 1000)",
+            "value": 219321.08357747397,
+            "unit": "ns",
+            "range": "± 5547.552829470647"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 10)",
+            "value": 38328.7255859375,
+            "unit": "ns",
+            "range": "± 685.9385214083286"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 100)",
+            "value": 112145.47870342548,
+            "unit": "ns",
+            "range": "± 834.4812191119804"
+          },
+          {
+            "name": "PerformanceTests.QueryTests.Enumerate(ObjectCount: 1000)",
+            "value": 900378.8736979166,
+            "unit": "ns",
+            "range": "± 11105.543584944453"
+          },
+          {
+            "name": "PerformanceTests.ObjectTests.GetPropertyValue",
+            "value": 1410.8097330729167,
+            "unit": "ns",
+            "range": "± 21.087254542407877"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 20)",
+            "value": 428.5507869720459,
+            "unit": "ns",
+            "range": "± 0.4044383438459887"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 100)",
+            "value": 1194.129524230957,
+            "unit": "ns",
+            "range": "± 18.435568710964606"
+          },
+          {
+            "name": "PerformanceTests.StringTests.GetPropertyValue(StringSize: 1000)",
+            "value": 12395.506795247396,
+            "unit": "ns",
+            "range": "± 411.3372297955452"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 20)",
+            "value": 3589.1786193847656,
+            "unit": "ns",
+            "range": "± 40.777628537487985"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 100)",
+            "value": 3682.726821899414,
+            "unit": "ns",
+            "range": "± 31.92296577094459"
+          },
+          {
+            "name": "PerformanceTests.StringTests.LookupByPK(StringSize: 1000)",
+            "value": 8244.972941080729,
+            "unit": "ns",
+            "range": "± 142.10510406616632"
+          },
+          {
+            "name": "PerformanceTests.ObjectTests.SetPropertyValue",
+            "value": 363.8783073425293,
+            "unit": "ns",
+            "range": "± 0.46533461675232013"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 20)",
+            "value": 713.243548075358,
+            "unit": "ns",
+            "range": "± 0.8445946270538267"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 100)",
+            "value": 868.9424810738399,
+            "unit": "ns",
+            "range": "± 25.281988240546458"
+          },
+          {
+            "name": "PerformanceTests.StringTests.SetPropertyValue(StringSize: 1000)",
+            "value": 5459.795930650499,
+            "unit": "ns",
+            "range": "± 108.55911655656561"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 128, ObjectCount: 10)",
+            "value": 3402172.9791666665,
+            "unit": "ns",
+            "range": "± 171676.48230274383"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 128, ObjectCount: 100)",
+            "value": 3345289.2616421566,
+            "unit": "ns",
+            "range": "± 135745.4090345772"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1024, ObjectCount: 10)",
+            "value": 3273622.1261160714,
+            "unit": "ns",
+            "range": "± 192734.59859987826"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1024, ObjectCount: 100)",
+            "value": 3290163.9296875,
+            "unit": "ns",
+            "range": "± 132893.71074008814"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1048576, ObjectCount: 10)",
+            "value": 3769015.625,
+            "unit": "ns",
+            "range": "± 216980.89029951626"
+          },
+          {
+            "name": "PerformanceTests.BinaryWriteTests.Write(BinarySize: 1048576, ObjectCount: 100)",
+            "value": 7207386.046511628,
+            "unit": "ns",
+            "range": "± 391195.7166741298"
+          },
+          {
+            "name": "PerformanceTests.EmptyWriteTests.Write",
+            "value": 3295754.53125,
+            "unit": "ns",
+            "range": "± 107896.19839644678"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 20, ObjectCount: 10)",
+            "value": 3232621.34765625,
+            "unit": "ns",
+            "range": "± 113963.36422103313"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 20, ObjectCount: 100)",
+            "value": 3360014.5164695946,
+            "unit": "ns",
+            "range": "± 112705.94089654485"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 200, ObjectCount: 10)",
+            "value": 3350107.2443181816,
+            "unit": "ns",
+            "range": "± 81595.27219302293"
+          },
+          {
+            "name": "PerformanceTests.StringWriteTests.Write(StringLength: 200, ObjectCount: 100)",
+            "value": 3425350.597098214,
+            "unit": "ns",
+            "range": "± 166372.3378200259"
           }
         ]
       }
