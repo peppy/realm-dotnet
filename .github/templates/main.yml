@@ -156,6 +156,8 @@ steps:
   - #@ template.replace(dotnetPublish(projectPath, framework, properties))
   - name: Run the tests
     run: #@ "${{ steps.dotnet-publish.outputs.executable-path }}/" + executeCommand
+    env:
+      TMPDIR: ${{ github.workspace }}/tmp
 #@ end
 
 #@ def dotnetPublish(projectPath, framework, properties = {}):
@@ -473,8 +475,6 @@ jobs:
     name: Benchmark Linux
     needs: build-packages
     runs-on: performance-tests
-    env:
-      TMPDIR: ${{ github.workspace }}/tmp
     #! if: ${{ github.event_name == 'push' }}
     steps:
       - name: Cleanup Workspace
