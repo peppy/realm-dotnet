@@ -222,6 +222,7 @@ name: main
     branches:
       - main
       - master
+      - ni/perf-tests-3
   pull_request:
 env:
   REALM_DISABLE_ANALYTICS: true
@@ -471,7 +472,9 @@ jobs:
   benchmark-linux:
     name: Benchmark Linux
     needs: build-packages
-    runs-on: aard-rust
+    runs-on: performance-tests
+    env:
+      TMPDIR: ${{ github.workspace }}/tmp
     #! if: ${{ github.event_name == 'push' }}
     steps:
       - name: Cleanup Workspace
